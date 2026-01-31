@@ -13,8 +13,6 @@ async def health_ping():
 
 @app.post("/predict", response_model=PredictionResponse)
 async def predict_wine(data: WineFeatures):
-    """Receive named wine features and return the predicted class.
-    """
     try:
         feature_vector = [list(data.dict().values())]
         prediction = predict_data(feature_vector)

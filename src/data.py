@@ -7,8 +7,8 @@ def load_data():
     """
     Load the Wine dataset and return the features and target values.
     Returns:
-        X (numpy.ndarray): The features of the dataset.
-        y (numpy.ndarray): The target values of the dataset.
+        X : The features of the wine dataset.
+        y : The target values of the wine dataset.
     """
     data = load_wine()
     X = data.data
@@ -19,8 +19,8 @@ def split_data(X, y):
     """
     Split the data into training and testing sets.
     Args:
-        X (numpy.ndarray): The features of the dataset.
-        y (numpy.ndarray): The target values of the dataset.
+        X : The features of the wie dataset.
+        y : The target values of the wine dataset.
     Returns:
         X_train, X_test, y_train, y_test (tuple): The split dataset.
     """
