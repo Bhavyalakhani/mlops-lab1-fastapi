@@ -1,6 +1,6 @@
 from pydantic import BaseModel
 
-class Features(BaseModel):
+class WineFeatures(BaseModel):
     alcohol: float
     malic_acid: float
     ash: float

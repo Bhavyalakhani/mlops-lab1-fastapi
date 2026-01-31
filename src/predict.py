@@ -3,7 +3,7 @@ from pathlib import Path
 
 
 def predict_data(X):
-    """Predict class labels for the input data using the saved model.
+    """Predict class labels for the input data using the trained model.
     """
     model_path = Path("../model") / "predict_wine_dataset_random_forest.pkl"
     if not model_path.exists():

@@ -11,17 +11,17 @@ def fit_model(X_train, y_train):
     Train a RandomForestClassifier and save the model to a file.
 
     Args:
-        X_train (numpy.ndarray): Training features.
-        y_train (numpy.ndarray): Training target values.
+        X_train : Training data features.
+        y_train : Training data target values.
     """
-    rf = RandomForestClassifier(n_estimators=100, random_state=12)
-    rf.fit(X_train, y_train)
+    rf_model = RandomForestClassifier(n_estimators=100, random_state=12)
+    rf_model.fit(X_train, y_train)
     model_dir = Path("../model")
     model_dir.mkdir(parents=True, exist_ok=True)
     model_path = model_dir / "predict_wine_dataset_random_forest.pkl"
-    joblib.dump(rf, str(model_path))
+    joblib.dump(rf_model, str(model_path))
 
-    return rf, model_path
+    return rf_model, model_path
 
 if __name__ == "__main__":
     logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s")
